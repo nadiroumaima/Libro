@@ -1,26 +1,26 @@
 {
-  "name": "book_rec",
+  "name": "bookrec-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/book_rec/src",
+  "sourceRoot": "apps/bookrec-ui/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/book_rec",
-        "browser": "apps/book_rec/src/main.ts",
+        "outputPath": "dist/apps/bookrec-ui",
+        "browser": "apps/bookrec-ui/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/book_rec/tsconfig.app.json",
+        "tsConfig": "apps/bookrec-ui/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/book_rec/public"
+            "input": "apps/bookrec-ui/public"
           }
         ],
-        "styles": ["apps/book_rec/src/styles.css"]
+        "styles": ["apps/bookrec-ui/src/styles.css"]
       },
       "configurations": {
         "production": {
@@ -51,10 +51,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "book_rec:build:production"
+          "buildTarget": "bookrec-ui:build:production"
         },
         "development": {
-          "buildTarget": "book_rec:build:development"
+          "buildTarget": "bookrec-ui:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -62,7 +62,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "book_rec:build"
+        "buildTarget": "bookrec-ui:build"
       }
     },
     "lint": {
@@ -72,8 +72,8 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "book_rec:build",
-        "staticFilePath": "dist/apps/book_rec/browser",
+        "buildTarget": "bookrec-ui:build",
+        "staticFilePath": "dist/apps/bookrec-ui/browser",
         "spa": true
       }
     }
